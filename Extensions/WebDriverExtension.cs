@@ -22,8 +22,7 @@ namespace SeleniumFramework.Extensions
         private static WebDriverWait MediumWait(IWebDriver driver) => new WebDriverWait(new SystemClock(), driver, TimeSpan.FromSeconds(s_mediumWait), TimeSpan.FromMilliseconds(25.0));
         private static WebDriverWait LongWait(IWebDriver driver) => new WebDriverWait(new SystemClock(), driver, TimeSpan.FromSeconds(s_longWait), TimeSpan.FromMilliseconds(25.0));
         private static void Log(string message) => LogHelper.LogFile(LoggingStep.GetFeatureFileName(), message);
-        // public delegate void Execution()
-
+       
         public static void CloseTab(this IWebDriver driver)
         {
             Delegate closeTab = () => { driver.Close(); };
